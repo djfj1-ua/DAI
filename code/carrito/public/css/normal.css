@@ -1,0 +1,150 @@
+body{
+    color: #333333;
+    margin: 0;
+}
+
+header{
+    width: 98%;/*El ancho del header será el 98% del ancho de la pagina*/
+    max-width: 1080px;/*El ancho máximo será de 1080px*/
+    margin: 0 auto;/*Márgenes automáticos a la izquierda y derecha para centrar el header*/
+    text-align: center;/*Centrar el texto dentro del header*/
+}
+
+li{
+    list-style-type: none;/*Quitar los puntos de la lista*/
+}
+
+li a{
+    color: cornflowerblue;/*Color de enlace*/
+    text-decoration: none;/*Sin subrayado*/
+}
+
+h1{
+    font-weight: bold;/*Negrita*/
+    font-size: 36px;
+}
+
+main{
+    max-width: 1080px;
+    margin: 0 auto;
+    width: 98%;
+}
+
+section{
+    margin-top: 80px;
+}
+
+.pregunta{
+    margin-top: 1ex;
+    margin-bottom: 1ex;
+}
+
+.idioma{
+    font-style: italic;
+}
+
+footer{
+    height: 50px;
+    margin-top: 100px;
+    background-color: steelblue;
+    width: 100%;
+    font-size: 80%;
+    line-height: 50px;
+    text-align: center;
+    color: white;
+}
+
+footer a{
+    color: lightgray;
+    text-decoration: none;
+}
+
+*{
+    font-family: 'Droid Serif', serif;
+}
+
+.bloque{
+    background-color: whitesmoke;
+    border: 1px solid lightgray;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    box-shadow: 6px 6px 3px slategray;
+    position: relative;
+}
+
+section{
+    counter-reset: contPregunta;
+}
+
+.bloque::before{
+    counter-increment: contPregunta;
+    content: "Pregunta " counter(contPregunta);
+}
+
+.respuesta[data-valor="true"]::before{
+    content: "verdadero"
+}
+.respuesta[data-valor="false"]::before{
+    content: "falso"
+}
+
+.formulario ul{
+    padding: 0px;
+
+}
+
+.formulario li{
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.formulario li:first-child{
+    border-top: 1px solid #777;
+}
+
+.formulario li:last-child {
+    border-bottom: 1px solid #777;
+}
+
+.formulario label{
+    display: inline-block;
+    width: 15em;
+}
+
+.formulario input[type="url"]{
+    border: 1px solid #aaa;
+    box-shadow: 0px 0px 3px #ccc, 0 5px 8px #eee inset;
+    border-radius: 2px;
+}
+
+.formulario input[type="text"]{
+    border: 1px solid #aaa;
+    box-shadow: 0px 0px 3px #ccc, 0 5px 8px #eee inset;
+    border-radius: 2px;
+}
+
+.borra:first-child{
+    position: absolute;
+    top: 1px;
+    right: 2px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+label.radio {
+    width: 5em;
+    display: inline-block;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+    display: table;
+}
+
+nav ul li {
+    text-align: center;
+    margin: 5px 0;
+}
